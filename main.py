@@ -41,6 +41,11 @@ def main():
                 print("Game over!")
                 sys.exit()
 
+            for j in shots:
+                if i.collision(j):
+                    i.split()
+                    j.kill()
+
 
         for i in drawable:
             i.draw(screen)
